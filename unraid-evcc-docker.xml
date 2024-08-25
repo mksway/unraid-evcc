@@ -15,8 +15,8 @@
     <Project>https://https://evcc.io/</Project>
     <Overview>unraid template for evcc</Overview>
     <WebUI>http://[IP]:[PORT:7070]</WebUI>
-    <TemplateURL>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/code-server.xml</TemplateURL>
-    <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/code-server-icon.png</Icon>
+    <TemplateURL>https://github.com/mksway/unraid-evcc/blob/main/unraid-evcc-docker.xml</TemplateURL>
+    <Icon>https://github.com/mksway/unraid-evcc/blob/main/logo.png/Icon>
     <Date>1970-01-01</Date>
     <Changes></Changes>
     <Config Name="Port: Web Interface" Target="7070" Default="7070" Mode="tcp" Description="This is the Web UI port for for the application." Type="Port" Display="always" Required="true" Mask="false"/>
