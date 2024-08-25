@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>unraid-evcc</Name>
+    <Beta>false</Beta>
+    <Category>Cloud: Productivity: Tools:Utilities</Category>
+    <Repository>evcc/evcc</Repository>
+    <Registry>https://hub.docker.com/r/evcc/evcc</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <ExtraParams>--restart unless-stopped</ExtraParams>
+    <Shell>bash</Shell>
+    <GitHub>https://github.com/mksway/unraid-evcc/</GitHub>
+    <ReadMe>https://github.com/mksway/unraid-evcc/documentation</ReadMe>
+    <Support>https://forums.unraid.net/topic/110282-support-binhex-code-server/</Support>
+    <Project>https://https://evcc.io/</Project>
+    <Overview>unraid template for evcc</Overview>
+    <WebUI>http://[IP]:[PORT:7070]</WebUI>
+    <TemplateURL>https://github.com/mksway/unraid-evcc/blob/main/unraid-evcc-docker.xml</TemplateURL>
+    <Icon>https://github.com/mksway/unraid-evcc/blob/main/logo.png/Icon>
+    <Date>1970-01-01</Date>
+    <Changes></Changes>
+    <Config Name="Port: Web Interface" Target="7070" Default="7070" Mode="tcp" Description="This is the Web UI port for for the application." Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Port: Websocket" Target="8887" Default="8887" Mode="tcp" Description="port 8887" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Port: Websocket" Target="7090" Default="7090" Mode="udp" Description="port 7090" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Port: Websocket" Target="9522" Default="9522" Mode="udp" Description="port 9522" Type="Port" Display="always" Required="true" Mask="false"/>
+
+    <Config Name="File: evcc.yaml" Target="/etc/evcc.yaml" Default="/mnt/user/appdata/evcc/evcc.yaml" Mode="rw" Description="This is the configuration file" Type="Path" Display="always" Required="true" Mask="false"/>
+	  <Config Name="Path: .evcc" Target="/root/.evcc" Default="" Mode="rw" Description="evcc database" Type="Path" Display="always" Required="true" Mask="false"/>      
+    <Config Name="Variable: MACHINE_ID" Target="/etc/machine-id" Default="" Description="Specify the path to the certificate key used for SSL/TLS." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
